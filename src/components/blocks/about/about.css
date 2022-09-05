@@ -1,0 +1,40 @@
+.about {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background: #d8ecfe;
+	width: 100%;
+	padding: 183px 553px 183px 90px;
+	align-items: center;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+.about__wrapper {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+	width: 650px;
+	z-index: 3;
+}
+
+.about__text {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	margin-top: 20px;
+	padding-right: 122px;
+	margin-bottom: 40px;
+}
+
+.about::after {
+	position: absolute;
+	content: "";
+	width: 446px;
+	height: 447px;
+	left: 744px;
+	top: 76px;
+	border-radius: 50%;
+	background: #C4E2FF;
+}
