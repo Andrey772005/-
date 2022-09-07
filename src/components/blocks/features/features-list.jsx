@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../../ui/title/title";
 import FeatureCard from "../../ui/feature-card/feature-card";
+import Button from "../../ui/button/button";
+import "./feature-list.css";
 
 function FeaturesList() {
 	return (
@@ -11,6 +13,7 @@ function FeaturesList() {
 					<FeatureCard />
 				</li>
 			</ul>
+			<Button>Купить</Button>
 		</section>
 	);
 }

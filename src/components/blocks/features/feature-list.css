@@ -5,3 +5,7 @@
 	align-items: center;
 	text-align: center;
 }
+
+.feature-list__list {
+	list-style: none;
+}

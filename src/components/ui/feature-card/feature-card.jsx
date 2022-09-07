@@ -1,5 +1,6 @@
 import React from "react";
 import Title, {TitleSize} from "../title/title";
+import "./feature-card.css";
 
 function FeatureCard() {
 	return (
