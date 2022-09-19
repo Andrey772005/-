@@ -12,14 +12,14 @@ function FeaturesList( {features} ) {
 					<Title>Почему фермерские продукты лучше?</Title>
 					<ul className="feature-list__list">
 						{features.map((feature) => (
-								<li className="feature-list__item" key={feature.id}>
-									<FeatureCard {...feature} />
-								</li>
-							))}
+							<li className="feature-list__item" key={feature.id}>
+								<FeatureCard {...feature} />
+							</li>
+						))}
 					</ul>
 					<Button>Купить</Button>
 				</>
-				) : null}
+			) : null}
 		</section>
 	);
 }

@@ -2,16 +2,24 @@ import React from "react";
 import Title, {TitleSize} from "../title/title";
 import "./feature-card.css";
 
-function FeatureCard() {
+function FeatureCard({image, feature, header, about}) {
 	return (
 		<article className="feature-card">
-			<span className="feature-card__feature">Фермерские продукты</span>
-			<Title size={TitleSize.SMALL}>Еда намного вкуснее</Title>
-			<p className="feature-card__text">Домашняя колбаса из мяса,
-				соли и специй и колбаса из магазина —
-				два настолько разных продукта,
-				что они даже не родственники
-			</p>
+			<img
+				src={image}
+				className="feature-card__image"
+				width={52}
+				height={52}
+			/>
+			<span
+				className="feature-card__feature"
+				feature={feature}
+			/>
+			<Title size={TitleSize.SMALL}>{header}</Title>
+			<p
+				className="feature-card__text"
+				dangerouslySetInnerHTML={{__html: about}}
+			/>
 		</article>
 	);
 }
