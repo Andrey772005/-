@@ -4,5 +4,6 @@ import "./App.css";
 import cardList from "../mocks/cardList";
 
 export default function App() {
-  return <PageWrapper card={cardList} />;
+  return <PageWrapper features={cardList} />;
 }
+
