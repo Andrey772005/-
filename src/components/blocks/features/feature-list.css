@@ -12,8 +12,8 @@
 
 .feature-list__list {
 	display: grid;
-	grid-template-columns: 540px 540px;
-	grid-template-rows: 197px 197px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	gap: 20px;
 	list-style: none;
 }

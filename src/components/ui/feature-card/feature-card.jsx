@@ -11,10 +11,9 @@ function FeatureCard({image, feature, header, about}) {
 				width={52}
 				height={52}
 			/>
-			<span
-				className="feature-card__feature"
-				feature={feature}
-			/>
+			<span className="feature-card__feature">
+				{feature}
+			</span>
 			<Title size={TitleSize.SMALL}>{header}</Title>
 			<p
 				className="feature-card__text"

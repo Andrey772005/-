@@ -4,7 +4,7 @@
 	justify-content: flex-start;
 	position: relative;
 	width: 540px;
-	height: auto;
+	height: 197px;
 	background: #e1edce;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .feature-card__feature {
-	display: block;
+	display: inline;
 	margin-left: 92px;
 	margin-top: 20px;
 	margin-bottom: 0;
@@ -30,14 +30,26 @@
 	background: #88AA4D;
 	color: #FFFFFF;
 	text-align: center;
+	box-sizing: border-box;
+}
+
+.title_small {
+	display: inline;
+	box-sizing: border-box;
+	text-align: left;
+	margin-top: 4px;
+	margin-left: 90px;
+	margin-bottom: 0;
+
 }
 
 .feature-card__text {
 	font-size: 18px;
 	line-height: 150%;
-	margin: 20px;
 	width: 500px;
 	height: auto;
+	text-align: left;
+	margin: 20px 20px;
 }
 
 

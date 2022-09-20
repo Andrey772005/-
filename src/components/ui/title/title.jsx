@@ -4,7 +4,9 @@ import "./title.css";
 export const TitleSize = {
 	BIG: "big",
 	SMALL: "small",
-	DEFAULT: ""
+	DEFAULT: "",
+	FARM: "farm",
+	GROCERY: "grocery"
 };
 
 function Title({ children, size }) {
