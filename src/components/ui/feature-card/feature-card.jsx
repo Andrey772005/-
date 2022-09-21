@@ -1,8 +1,9 @@
 import React from "react";
 import Title, {TitleSize} from "../title/title";
+import image from "../feature-card/eat.svg";
 import "./feature-card.css";
 
-function FeatureCard({image, feature, header, about}) {
+function FeatureCard({feature, header, about}) {
 	return (
 		<article className="feature-card">
 			<img
