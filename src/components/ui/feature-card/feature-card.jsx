@@ -1,18 +1,18 @@
 import React from "react";
 import Title, {TitleSize} from "../title/title";
-import image from "../feature-card/eat.svg";
 import "./feature-card.css";
 
-function FeatureCard({feature, header, about}) {
+function FeatureCard({header, feature, about, isNegative, image}) {
 	return (
-		<article className="feature-card">
+		<section className={`feature${isNegative ? " feature_negative" : ""}`}>
 			<img
-				src={image}
 				className="feature-card__image"
-				width={52}
-				height={52}
+				width={56}
+				height={56}
+				src={image}
+				alt="Еда намного вкуснее"
 			/>
-			<span className="feature-card__feature">
+			<span className={`feature-card__feature${isNegative ? " feature-card__negative" : ""}`}>
 				{feature}
 			</span>
 			<Title size={TitleSize.SMALL}>{header}</Title>
@@ -20,7 +20,7 @@ function FeatureCard({feature, header, about}) {
 				className="feature-card__text"
 				dangerouslySetInnerHTML={{__html: about}}
 			/>
-		</article>
+		</section>
 	);
 }
 

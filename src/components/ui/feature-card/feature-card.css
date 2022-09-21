@@ -1,4 +1,4 @@
-.feature-card {
+.feature {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -27,8 +27,8 @@
 	line-height: 150%;
 	width: 178px;
 	height: 25px;
-	background: #88AA4D;
-	color: #FFFFFF;
+	background: #88aa4d;
+	color: #ffffff;
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -50,6 +50,14 @@
 	height: auto;
 	text-align: left;
 	margin: 20px 20px;
+}
+
+.feature_negative {
+	background-color: #f8ddd7;
+}
+
+.feature-card__negative {
+	background-color: #f75531;
 }
 
 
