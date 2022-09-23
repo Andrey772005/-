@@ -9,6 +9,7 @@ export const defaultTheme = {
 	colorForNegativeCard: "#f8ddd7",
 	colorForNegativeFeature: "#f75531",
 	pagePadding: "90px",
+	paddingTop: "100px",
 	indent: "20px",
 	footerHeight: "80px",
 	pageWidth: "1280px",
