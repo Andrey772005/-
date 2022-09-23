@@ -8,6 +8,9 @@ export const defaultTheme = {
 	colorForPositiveFeature: "#88aa4d",
 	colorForNegativeCard: "#f8ddd7",
 	colorForNegativeFeature: "#f75531",
+	pagePadding: "90px",
+	indent: "20px",
+	footerHeight: "80px",
 	pageWidth: "1280px",
 	fontSizeDefault: "18px",
 	fontFamily: '"Inter", "Arial", sans-serif'
