@@ -1,14 +1,16 @@
-.button {
+import styled from "styled-components";
+
+export const StyledButton = styled.a`
 	display: block;
-	width: 220px;
+	min-width: 260px;
 	height: 60px;
 	margin-top: 64px;
 	margin-bottom: 100px;
-	font-size: 18px;
+	font-size: ${(props) => props.theme.fontSizeDefault};
 	font-weight: 700;
 	line-height: 1.5;
-	color: #ffffff;
-	background-color: #fc9b27;
+	color: ${(props) => props.theme.colorWhite};
+	background-color: ${(props) => props.theme.buttonColor};
 	text-align: center;
 	text-decoration: none;
 	border: none;
@@ -16,15 +18,14 @@
 	box-shadow: none;
 	cursor: pointer;
 	transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
-}
 
-.button:hover,
-.button:active {
-	background-color: #fc7427;
+&:hover,
+&:active {
+	background-color: ${(props) => props.theme.buttonColorHover};
 	box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.14);
 }
 
-.button:active {
+&:active {
 	box-shadow: none;
-	background-color: #fc7427;
 }
+`;
