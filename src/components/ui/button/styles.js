@@ -5,8 +5,6 @@ export const StyledButton = styled.a`
 	min-width: 260px;
 	min-height: 60px;
 	height: 60px;
-	margin-top: 64px;
-	margin-bottom: 100px;
 	font-size: ${(props) => props.theme.fontSizeDefault};
 	font-weight: 700;
 	line-height: 58px;
