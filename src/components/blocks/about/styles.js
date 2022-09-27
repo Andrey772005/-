@@ -21,6 +21,7 @@ export const StyledSection = styled(Section)`
 	padding: 150px 553px 127px 90px;
 	align-items: center;
 	z-index: 1;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
 
   &::after {
     position: absolute;

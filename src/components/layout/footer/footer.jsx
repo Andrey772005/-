@@ -1,13 +1,13 @@
 import React from "react";
 import Logo from "../../ui/logo/logo";
-import "./footer.css";
+import { FooterSection, FooterCopyRight } from "./styles";
 
 function Footer() {
 	return (
-		<footer className="footer">
+		<FooterSection>
 			<Logo />
-			<span className="footer__copyright">Создано 2022</span>
-		</footer>
+			<FooterCopyRight>Создано 2022</FooterCopyRight>
+		</FooterSection>
 	);
 }
 
