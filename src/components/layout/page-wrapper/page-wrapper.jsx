@@ -14,7 +14,7 @@ function PageWrapper() {
 			</Main>
 			<Footer />
 		</>
-	);
+	)
 }
 
 export default PageWrapper;

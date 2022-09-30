@@ -8,7 +8,7 @@ function Footer() {
 			<Logo />
 			<FooterCopyRight>Создано 2022</FooterCopyRight>
 		</FooterSection>
-	);
+	)
 }
 
 export default Footer;

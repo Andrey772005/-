@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {Section} from "../../../styled";
+import Label from "../../../styled/label/label";
+import Button from "../../ui/button/button";
 
 export const BuyPage = styled.form`
 	position: relative;
@@ -34,6 +36,26 @@ export const OrderPanel = styled(Section)`
   background: ${(props) => props.theme.colorWhite };
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04);
+`;
+
+export const PriceLabel = styled(Label)`
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	margin-top: 20px;
+	margin-bottom: 8px;
+`;
+
+export const Price = styled.span`
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+	margin-bottom: 32px;
+	color: ${(props) => props.theme.textColor};
+`;
+
+export const BuyButton = styled(Button)`
+	min-width: 314px;
 `;
 
 export const ProductSlider = styled(Section)`

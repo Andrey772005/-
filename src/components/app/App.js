@@ -8,8 +8,8 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <PageWrapper features={cardList} />;
+      <PageWrapper features={cardList} />
     </>
-  );
+  )
 }
 

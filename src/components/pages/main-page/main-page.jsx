@@ -8,7 +8,7 @@ function MainPage({ features }) {
 			<About />
 			<FeaturesList features={features} />
 		</>
-	);
+	)
 }
 
 export default MainPage;
