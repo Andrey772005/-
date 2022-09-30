@@ -5,12 +5,12 @@ import Footer from "../footer/footer";
 import "./styles";
 import ProductPage from "../../pages/buy-page/buy-page";
 
-function PageWrapper({ ...prop }) {
+function PageWrapper() {
 	return (
 		<>
 			<Header />
 			<Main>
-				<ProductPage {...prop} />
+				<ProductPage />
 			</Main>
 			<Footer />
 		</>

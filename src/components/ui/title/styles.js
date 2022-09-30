@@ -5,7 +5,7 @@ export const StyledTitle = styled.h1`
 	font-family: ${(props) => props.theme.fontFamily};
 	font-style: normal;
 	font-weight: 700;
-	line-height: 115%;
+	line-height: 150%;
 	color: ${(props) => props.theme.textColor};
   font-size: ${(props) => {
 		let fontSize = "36px";
