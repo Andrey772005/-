@@ -1,6 +1,7 @@
 import React from "react";
 import Title, {TitleSize, TitleLevel} from "../../ui/title/title";
 import {AddressInput} from "../../ui/input/input";
+import Product from "../../ui/product-card/product-card";
 import {
 	BuyPage,
 	BuyPageWrapper,
@@ -9,7 +10,14 @@ import {
 	ProductSlider,
 	PriceLabel,
 	Price,
-	BuyButton} from "./styles";
+	BuyButton,
+	ProductSwiper} from "./styles";
+
+import { SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
+import "../../swiper/swiper-bundle.min.css";
+import products from "../../mocks/products";
+SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
 function ProductPage() {
 	return (
@@ -27,7 +35,13 @@ function ProductPage() {
 						<BuyButton minWidth={314} link="/buy">Купить</BuyButton>
 					</OrderPanel>
 					<ProductSlider>
-
+						<ProductSwiper>
+							{products.map((product) => (
+								<SwiperSlide key={product.id}>
+									<Product product={product} />
+								</SwiperSlide>
+							))}
+						</ProductSwiper>
 					</ProductSlider>
 				</BuyPageWrapper>
 			</BuyPage>

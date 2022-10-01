@@ -3,6 +3,7 @@ import { StyledTitle } from "./styles";
 
 export const TitleSize = {
 	BIG: "big",
+	MEDIUM: 'medium',
 	SMALL: "small",
 	DEFAULT: "",
 };

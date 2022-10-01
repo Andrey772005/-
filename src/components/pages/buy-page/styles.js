@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Section} from "../../../styled";
 import Label from "../../../styled/label/label";
 import Button from "../../ui/button/button";
+import { Swiper } from "swiper/react";
 
 export const BuyPage = styled.form`
 	position: relative;
@@ -62,4 +63,16 @@ export const ProductSlider = styled(Section)`
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
 	padding: 0;
+`;
+
+export const ProductSwiper = styled(Swiper)`
+  width: 727px;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
 `;

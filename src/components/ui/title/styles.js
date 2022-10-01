@@ -12,6 +12,9 @@ export const StyledTitle = styled.h1`
 		if (props.$size === TitleSize.BIG) {
 			fontSize = "44px";
 		}
+    if (props.$size === TitleSize.MEDIUM) {
+      fontSize = "24px";
+    }
 		if (props.$size === TitleSize.SMALL) {
 			fontSize = "18px";
 		}
