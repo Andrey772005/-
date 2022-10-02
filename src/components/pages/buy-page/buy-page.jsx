@@ -9,9 +9,9 @@ import {
 	OrderPanel,
 	ProductSlider,
 	PriceLabel,
-	Price,
 	BuyButton,
-	ProductSwiper} from "./styles";
+	ProductSwiper,
+	Price} from "./styles";
 
 import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";

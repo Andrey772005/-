@@ -32,3 +32,15 @@ export const ProductCardWrapper = styled.div`
 	margin-top: 20px;
 	margin-right: 20px;
 `;
+
+export const Price = styled.span`
+  position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 4px 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+	background: #d8ecfe;
+	color: ${(props) => props.theme.textColor};
+`;

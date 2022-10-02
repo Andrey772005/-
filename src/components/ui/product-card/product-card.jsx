@@ -4,7 +4,8 @@ import {
 	ProductCard,
 	ProductImage,
 	ProductCardWrapper,
-	ProductTitle} from "./styles";
+	ProductTitle,
+	Price	} from "./styles";
 
 
 function Product({product}) {
@@ -15,6 +16,7 @@ function Product({product}) {
 				<ProductTitle level={TitleLevel.H3} size={TitleSize.MEDIUM}>
 					{product.name}
 				</ProductTitle>
+				<Price> {product.price} руб. / {product.weight} гр.</Price>
 			</ProductCardWrapper>
 		</ProductCard>
 	)
