@@ -8,6 +8,8 @@ export const defaultTheme = {
 	colorForNegativeCard: "#f8ddd7",
 	colorForPositiveFeature: "#88aa4d",
 	colorForNegativeFeature: "#f75531",
+	tabBackgroundColorActive: "#88aa4d",
+	tabBackgroundColorInactive: "#f7f7f7",
 	pagePadding: "90px",
 	paddingTop: "100px",
 	indent: "20px",

@@ -35,7 +35,16 @@ function ProductPage() {
 						<BuyButton minWidth={314} link="/buy">Купить</BuyButton>
 					</OrderPanel>
 					<ProductSlider>
-						<ProductSwiper>
+						<ProductSwiper
+							spaceBetween={12}
+							direction="vertical"
+							slidesPerView="auto"
+							scrollbar={{ draggable: true }}
+							mousewheel
+							pagination={{
+								type: "fanction"
+							}}
+						>
 							{products.map((product) => (
 								<SwiperSlide key={product.id}>
 									<Product product={product} />

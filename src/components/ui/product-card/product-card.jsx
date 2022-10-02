@@ -6,9 +6,24 @@ import {
 	ProductCardWrapper,
 	ProductTitle,
 	Price	} from "./styles";
-
+import Tabs from "../tabs/tabs";
+import OptionsList from "../options-list/options-list";
 
 function Product({product}) {
+	const tabsList = [
+		{
+			title: "Oписание",
+			content: product.description
+		},
+		{
+			title: "Характеристики",
+			content: <OptionsList list={product.specifications} />
+		},
+		{
+			title: "Свойства",
+			content: <OptionsList list={product.structure} />
+		}
+	];
 	return (
 		<ProductCard>
 			<ProductImage src={product.image} />
@@ -16,7 +31,10 @@ function Product({product}) {
 				<ProductTitle level={TitleLevel.H3} size={TitleSize.MEDIUM}>
 					{product.name}
 				</ProductTitle>
-				<Price> {product.price} руб. / {product.weight} гр.</Price>
+				<Tabs maxContentHeight="105px" tabsList={tabsList} />
+				<Price>
+					{product.price} руб. / {product.weight} гр.
+				</Price>
 			</ProductCardWrapper>
 		</ProductCard>
 	)
