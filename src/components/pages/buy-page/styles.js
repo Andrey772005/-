@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {Section} from "../../../styled";
 import Label from "../../../styled/label/label";
 import Button from "../../ui/button/button";
 import { Swiper } from "swiper/react";
+import checkboxSelect from "../../../assets/checkbox.svg";
 
 export const BuyPage = styled.form`
 	position: relative;
@@ -74,5 +75,37 @@ export const ProductSwiper = styled(Swiper)`
 
   .swiper-slide {
     flex-shrink: 1;
+  }
+`;
+
+export const CheckboxLabel = styled.span`
+  position: relative;
+  display: flex;
+  height: 56px;
+  font-size: 18px;
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    left: 290px;
+    display: block;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    ${(props) =>
+	props.$isChecked
+		? css`
+            background-color: #fc9b27;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-image: url(${checkboxSelect});
+            background-repeat: no-repeat;
+            background-position: center center;
+          `
+		: css`
+            background-color: ${props.theme.tabBackgroundColorInactive};
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          `}
   }
 `;
