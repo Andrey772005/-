@@ -23,9 +23,15 @@ SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
 function ProductPage() {
 	const [selectProductIds, setSelectProductIds] = useState([]);
+	const [swiperRef, setSwiperRef] = useState(null);
+	const onClickProduct = (value, index) => {
+	  if (!selectProductIds.includes(value)) {
+			swiperRef.slideTo(index, 0);
+		}
+	};
 
 	return (
-			<BuyPage>
+			<BuyPage as="form">
 				<BuyPageWrapper>
 					<ChooseProductPanel>
 						<Title level={TitleLevel.H3} size={TitleSize.SMALL}>Выберите продукты</Title>
@@ -39,6 +45,7 @@ function ProductPage() {
 							}))}
 							selectValues={selectProductIds}
 							onChange={setSelectProductIds}
+							onClickLabel={onClickProduct}
 						/>
 					</ChooseProductPanel>
 					<OrderPanel>
@@ -50,13 +57,14 @@ function ProductPage() {
 					</OrderPanel>
 					<ProductSlider>
 						<ProductSwiper
+							onSwiper={setSwiperRef}
 							spaceBetween={12}
 							direction="vertical"
 							slidesPerView="auto"
 							scrollbar={{ draggable: true }}
 							mousewheel
 							pagination={{
-								type: "function"
+								type: "fanction"
 							}}
 						>
 							{products.map((product) => (

@@ -79,8 +79,8 @@ export const ProductSwiper = styled(Swiper)`
 `;
 
 export const CheckboxLabel = styled.span`
-  position: relative;
   display: flex;
+	position: relative;
   height: 56px;
   font-size: 18px;
   text-align: left;
