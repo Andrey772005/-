@@ -180,9 +180,9 @@ const products = [
 			{
 				property: 'Пищевая ценность',
 				value: 'белки - 25,2 г., жиры - 27 г., углеводы - 3,6 г. на 100 г.',
-			},
-		],
-	},
+			}
+		]
+	}
 ];
 
 export default products;

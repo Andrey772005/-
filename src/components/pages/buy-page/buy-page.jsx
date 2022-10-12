@@ -37,7 +37,16 @@ function ProductPage() {
 		}
 	};
 
-	return (
+	const [address, setAddress] = useState("");
+	const handleBuyClick = () => {
+		alert(`Спасибо за Ваш заказ, вы купили:\n${selectProducts.map(
+			(product) => `${product.name} - ${product.price} руб.\n`
+		)}
+    Итого: ${fullPrice} руб.
+    Доставка по адресу: ${address}.`);
+	};
+
+	return products && products.length ? (
 			<BuyPage as="form">
 				<BuyPageWrapper>
 					<ChooseProductPanel>
@@ -57,10 +66,10 @@ function ProductPage() {
 					</ChooseProductPanel>
 					<OrderPanel>
 						<Title level={TitleLevel.H3} size={TitleSize.SMALL}>Сделать заказ</Title>
-						<AddressInput placeholder="Введите адрес доставки"/>
+						<AddressInput value={address} onChange={(evt) => setAddress(evt.target.value)} placeholder="Введите адрес доставки"/>
 						<PriceLabel>Цена</PriceLabel>
 						<PriceValue value={fullPrice} />
-						<BuyButton minWidth={314} link="/buy">Купить</BuyButton>
+						<BuyButton minWidth={314} onClick={handleBuyClick} disabled={!(selectProductIds.length && address)}>Купить</BuyButton>
 					</OrderPanel>
 					<ProductSlider>
 						<ProductSwiper
@@ -71,7 +80,7 @@ function ProductPage() {
 							scrollbar={{ draggable: true }}
 							mousewheel
 							pagination={{
-								type: "fanction"
+								type: "function"
 							}}
 						>
 							{products.map((product) => (
@@ -83,7 +92,7 @@ function ProductPage() {
 					</ProductSlider>
 				</BuyPageWrapper>
 			</BuyPage>
-	)
+	) : ("Продукты были слишком вкусные и их разобрали");
 }
 
 export default ProductPage;
