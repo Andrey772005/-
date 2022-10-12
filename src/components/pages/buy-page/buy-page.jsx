@@ -10,9 +10,9 @@ import {
 	OrderPanel,
 	ProductSlider,
 	PriceLabel,
+	PriceValue,
 	BuyButton,
 	ProductSwiper,
-	Price,
 	CheckboxLabel} from "./styles";
 
 import { SwiperSlide } from "swiper/react";
@@ -22,8 +22,15 @@ import products from "../../mocks/products";
 SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
 function ProductPage() {
+
 	const [selectProductIds, setSelectProductIds] = useState([]);
 	const [swiperRef, setSwiperRef] = useState(null);
+	const selectProducts = selectProductIds.map((id) =>
+	products.find((product) => product.id === id));
+
+	const fullPrice = selectProducts.reduce((sum, product) =>
+	(sum += product.price), 0 );
+
 	const onClickProduct = (value, index) => {
 	  if (!selectProductIds.includes(value)) {
 			swiperRef.slideTo(index, 0);
@@ -52,7 +59,7 @@ function ProductPage() {
 						<Title level={TitleLevel.H3} size={TitleSize.SMALL}>Сделать заказ</Title>
 						<AddressInput placeholder="Введите адрес доставки"/>
 						<PriceLabel>Цена</PriceLabel>
-						<Price>1200 руб.</Price>
+						<PriceValue value={fullPrice} />
 						<BuyButton minWidth={314} link="/buy">Купить</BuyButton>
 					</OrderPanel>
 					<ProductSlider>

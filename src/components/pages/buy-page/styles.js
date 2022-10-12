@@ -4,6 +4,7 @@ import Label from "../../../styled/label/label";
 import Button from "../../ui/button/button";
 import { Swiper } from "swiper/react";
 import checkboxSelect from "../../../assets/checkbox.svg";
+import PriceOrder from "../../ui/price/price";
 
 export const BuyPage = styled.form`
 	position: relative;
@@ -46,6 +47,10 @@ export const PriceLabel = styled(Label)`
 	line-height: 150%;
 	margin-top: 20px;
 	margin-bottom: 8px;
+`;
+
+export const PriceValue = styled(PriceOrder)`
+  margin-bottom: 30px;
 `;
 
 export const Price = styled.span`
