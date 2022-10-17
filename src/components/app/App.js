@@ -8,12 +8,14 @@ import { GlobalStyle } from "./styles";
 import products from "../mocks/products";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {AppRoute} from "../../const";
+import Scrolltop from "../ui/scrolltop/scrolltop";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <Scrolltop />
         <Routes>
           <Route path={AppRoute.MAIN} element={<PageWrapper />}>
             <Route index element={<MainPage features={cardList} />} />
