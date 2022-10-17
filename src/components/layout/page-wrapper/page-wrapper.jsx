@@ -3,14 +3,14 @@ import Header from "../header/header";
 import {Main} from "./styles";
 import Footer from "../footer/footer";
 import "./styles";
-import ProductPage from "../../pages/buy-page/buy-page";
+import { Outlet } from "react-router-dom";
 
 function PageWrapper() {
 	return (
 		<>
 			<Header />
 			<Main>
-				<ProductPage />
+				<Outlet />
 			</Main>
 			<Footer />
 		</>

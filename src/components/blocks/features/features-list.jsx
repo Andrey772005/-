@@ -6,6 +6,7 @@ import FeatureCard from "../../ui/feature-card/feature-card";
 import { StyledButton } from "./styles";
 import { TitleLevel } from "../../ui/title/title";
 import { TitleSize } from "../../ui/title/title";
+import {AppRoute} from "../../../const";
 
 function FeaturesList( {features} ) {
 	return (
@@ -20,7 +21,7 @@ function FeaturesList( {features} ) {
 							</li>
 						))}
 					</StyledUl>
-					<StyledButton minWidth={260} link="/buy">
+					<StyledButton minWidth={260} link={AppRoute.ORDER}>
 						Купить
 					</StyledButton>
 				</>
