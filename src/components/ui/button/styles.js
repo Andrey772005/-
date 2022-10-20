@@ -11,7 +11,7 @@ export const StyledButton = styled(Link)`
 	line-height: 58px;
 	color: ${(props) => props.theme.colorWhite};
 	background-color: ${(props) => props.theme.buttonColor};
-	text-align: center;
+	text-align: center; 
 	text-decoration: none;
 	border: none;
 	background-image: none;
